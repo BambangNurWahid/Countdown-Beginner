@@ -1,85 +1,70 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
 }
-html {
-  font-family: sans-serif;
-  color: #088b8b;
+body {
+    background: #001e4d;
 }
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.app{
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
 }
-.main-container {
-  width: 100%;
-  height: 100vh;
-  background-color: white;
+.app h1 {
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom:1px solid #333;
+    padding-bottom: 30px;
 }
-/*progress indicator*/
-.circle-container {
-  width: 400px;
-  height: 400px;
-  background-color: #ddd;
-  border-radius: 50%;
-  position: absolute;
-  overflow: hidden;
-  z-index: 1;
+.quiz {
+    padding: 20px 0;
 }
-.semicircle {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: right center;
+.quiz h2 {
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600;
 }
-.semicircle:nth-child(1) {
-  background-color: #088b8b;
-  z-index: 2;
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
-.semicircle:nth-child(2) {
-  background-color: #088b8b;
-  z-index: 3;
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
 }
-.semicircle:nth-child(3) {
-  background-color: #ddd;
-  z-index: 4;
+.btn:disabled {
+    cursor: no-drop;
 }
-.outermost-circle {
-  width: 390px;
-  height: 390px;
-  background-color: white;
-  border-radius: 50%;
-  z-index: 5;
+#next-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin:  20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
 }
-
-/*Time*/
-.timer-container {
-  width: 330px;
-  height: 200px;
-  z-index: 5;
+.correct {
+    background: #9aeabc;
 }
-.timer {
-  width: 400px;
-  height: 100px;
-  z-index: 6;
-}
-.timer div {
-  font-size: 70px;
-  font-weight: 100;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10px 0 10px;
-}
-.timer .colon {
-  background-color: transparent;
-  width: 10px;
-  margin-left: 0;
-  margin-right: 0;
-  padding-bottom: 15px;
+.incorrect {
+    background: #ff9393;
 }
